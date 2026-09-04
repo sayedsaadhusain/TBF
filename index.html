@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bakers Farm (TBF) — Artisan Bakery, Café & Restaurant | Aliganj, Lucknow</title>
+  <meta name="description" content="Welcome to The Bakers Farm (TBF) in Aliganj, Lucknow. Freshly baked celebration cakes, pastries, authentic Chinese, creamy pasta, sizzling momos, burgers, mocktails and artisanal bakery treats.">
+  <meta name="keywords" content="The Bakers Farm, TBF Lucknow, Bakery in Aliganj, Café in Aliganj, Best Cakes Lucknow, Pasta Lucknow, Momos Aliganj, Lucknow Restaurants">
+  
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="The Bakers Farm (TBF) — Freshly Baked. Deliciously Crafted.">
+  <meta property="og:description" content="Artisan Bakery, Café & Restaurant in Aliganj, Lucknow. Order celebration cakes, desserts, savory café favorites, and Chinese meals.">
+  <meta property="og:image" content="assets/logo.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. STICKY NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-identity">
+        <div class="brand-logo-frame">
+          <img src="assets/logo.jpg" alt="The Bakers Farm Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-name">THE BAKERS FARM</span>
+          <span class="brand-tagline">Bakery · Café · Lucknow</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#cakes" class="nav-link">Cakes</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn-trigger" id="cartTrigger" aria-label="View Shopping Cart">
+          <span>🛍️</span>
+          <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+        </button>
+        <a href="#menu" class="btn btn-primary btn-sm">Order Now</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION (Warm Luxury Bakery Aesthetic)
+       ========================================================================= -->
+  <section class="hero-section" id="home">
+    <!-- Ambient floating particles & sunbeams -->
+    <div class="hero-sunbeam-glow" aria-hidden="true"></div>
+    <div class="hero-particles" aria-hidden="true">
+      <span class="particle p1"></span>
+      <span class="particle p2"></span>
+      <span class="particle p3"></span>
+      <span class="particle p4"></span>
+      <span class="particle p5"></span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container hero-container">
+      <div class="hero-content-col">
+        <!-- ESTD Tagline -->
+        <div class="hero-estd-wrap">
+          <span class="hero-estd-line"></span>
+          <span class="hero-estd-text">ESTD. 2024</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="hero-title">
+          <span class="hero-title-top">Crafting Moments,</span>
+          <span class="hero-title-bot">Baking Happiness</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-subtext">
+          From our farm to your table, we bake with passion, quality ingredients, and a whole lot of love.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-actions">
+          <a href="#menu" class="hero-cta-btn" id="heroExploreBtn">
+            <span>EXPLORE OUR COLLECTION</span>
+            <svg class="hero-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <button class="hero-secondary-btn" onclick="openCustomCakeModal()" title="Order custom celebration cakes">
+            <span>Custom Cakes 🎂</span>
+          </button>
+        </div>
+
+        <!-- 3 Feature Badges -->
+        <div class="hero-badges-row">
+          <!-- Badge 1: Premium Ingredients -->
+          <div class="hero-badge-card">
+            <div class="hero-badge-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22V3"/>
+                <path d="M12 7.5c-2.2 0-3.5-1.8-3.5-3.5 2.2 0 3.5 1.8 3.5 3.5z"/>
+                <path d="M12 7.5c2.2 0 3.5-1.8 3.5-3.5-2.2 0-3.5 1.8-3.5 3.5z"/>
+                <path d="M12 12c-2.2 0-3.5-1.8-3.5-3.5 2.2 0 3.5 1.8 3.5 3.5z"/>
+                <path d="M12 12c2.2 0 3.5-1.8 3.5-3.5-2.2 0-3.5 1.8-3.5 3.5z"/>
+                <path d="M12 16.5c-2.2 0-3.5-1.8-3.5-3.5 2.2 0 3.5 1.8 3.5 3.5z"/>
+                <path d="M12 16.5c2.2 0 3.5-1.8 3.5-3.5-2.2 0-3.5 1.8-3.5 3.5z"/>
+              </svg>
+            </div>
+            <span class="hero-badge-label">PREMIUM<br>INGREDIENTS</span>
+          </div>
+
+          <!-- Badge 2: Made With Love -->
+          <div class="hero-badge-card">
+            <div class="hero-badge-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 13.5a3.8 3.8 0 1 1 2.2-7.2 4.2 4.2 0 0 1 7.6 0 3.8 3.8 0 1 1 2.2 7.2"/>
+                <path d="M6 14h12v4a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4z"/>
+                <line x1="6" y1="17" x2="18" y2="17"/>
+              </svg>
+            </div>
+            <span class="hero-badge-label">MADE WITH<br>LOVE</span>
+          </div>
+
+          <!-- Badge 3: Fresh & Natural -->
+          <div class="hero-badge-card">
+            <div class="hero-badge-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19.5 4.5c-6.2-1-11.5 2-14 7.2-1.8 3.6-1 7.2.5 8.3 1.1 1.1 4.7 2.3 8.3.5 5.2-2.5 8.2-7.8 7.2-14z"/>
+                <path d="M6 19.5c3-3 8-7 13-14.5"/>
+                <path d="M11 14.5c1.8 0 2.8-.8 3.5-1.8"/>
+              </svg>
+            </div>
+            <span class="hero-badge-label">FRESH &amp;<br>NATURAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile/Tablet Visual Showcase (displayed when screen is narrower) -->
+      <div class="hero-visual-card">
+        <div class="hero-visual-frame">
+          <img src="assets/images/hero-showcase.jpg" alt="The Bakers Farm Arch, Balloons & Fresh Sourdough Loaf" class="hero-visual-img" loading="eager">
+        </div>
+      </div>
+    </div>
+
+    <!-- Marble Counter Edge Base -->
+    <div class="hero-marble-base" aria-hidden="true"></div>
+  </section>
+
+  <!-- =========================================================================
+       3. FEATURED CATEGORIES
+       ========================================================================= -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <span class="section-eyebrow">Explore By Category</span>
+        <h2 class="section-title">What Are You Craving Today?</h2>
+        <p class="section-subtitle">Browse through our artisan bakery specialties, hot café savouries, and chilled beverages.</p>
+      </div>
+
+      <div class="categories-grid" id="featuredCategoriesGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. BEST SELLERS (Customer Favourites)
+       ========================================================================= -->
+  <section class="bestsellers-section" id="bestsellers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Most Loved Creations</span>
+        <h2 class="section-title">Our Best Sellers</h2>
+        <p class="section-subtitle">The crowd favorites that define The Bakers Farm experience — crafted fresh to order every day.</p>
+      </div>
+
+      <div class="product-grid" id="bestsellersGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. FULL DIGITAL MENU
+       ========================================================================= -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Complete Food & Dessert Selection</span>
+        <h2 class="section-title">Explore Our Digital Menu</h2>
+        <p class="section-subtitle">
+          Search over 120 authentic items across 17 categories. Filter by dietary preference and order directly online.
+        </p>
+      </div>
+
+      <!-- Search & Filters Toolbar -->
+      <div class="menu-controls">
+        <div class="menu-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="menuSearchInput" class="search-input" placeholder="Search momos, pasta, chocolate cake, fried rice, shakes, burgers...">
+          <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear search">✕</button>
+        </div>
+
+        <div class="menu-filters-row">
+          <div class="diet-filters">
+            <button class="diet-filter-btn active" data-diet="all">All Items</button>
+            <button class="diet-filter-btn" data-diet="veg">
+              <span class="diet-indicator veg"></span> Pure Veg
+            </button>
+            <button class="diet-filter-btn" data-diet="non-veg">
+              <span class="diet-indicator non-veg"></span> Non-Veg
+            </button>
+          </div>
+          <div class="menu-items-count" id="menuItemsCount">
+            Prices in Indian Rupees (₹) · Freshly prepared
+          </div>
+        </div>
+
+        <!-- Horizontal Scrollable Category Pills -->
+        <div class="menu-category-tabs-wrap">
+          <div class="menu-category-tabs" id="menuCategoryTabs">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="product-grid" id="fullMenuGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. CAKES SHOWCASE & CUSTOM ENQUIRY
+       ========================================================================= -->
+  <section class="cakes-section" id="cakes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Handcrafted Celebration Cakes</span>
+        <h2 class="section-title" style="color: var(--color-gold-light);">Made for Every Celebration</h2>
+        <p class="section-subtitle" style="color: #cad8e0;">
+          From signature almond sponges to rich chocolate ganaches, choose your size and let us make your special day unforgettable.
+        </p>
+      </div>
+
+      <!-- Fondant Add-On Notice Bar -->
+      <div class="fondant-notice-bar">
+        <div class="fondant-notice-text">
+          ✨ <strong>Fondant Customisations Available:</strong> Semi Fondant (+₹400 / kg extra) · Full Fondant (+₹600 / kg extra)
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="openCustomCakeModal()">
+          Enquire Custom Theme Cake
+        </button>
+      </div>
+
+      <!-- Cake Tag Filters -->
+      <div class="cake-filter-pills">
+        <button class="cake-filter-btn active" data-tag="all">All Cakes</button>
+        <button class="cake-filter-btn" data-tag="Chocolate">Chocolate</button>
+        <button class="cake-filter-btn" data-tag="Fruit">Fruit Cakes</button>
+        <button class="cake-filter-btn" data-tag="Premium">Premium & Biscoff</button>
+        <button class="cake-filter-btn" data-tag="Classic">Classic Flavours</button>
+        <button class="cake-filter-btn" data-tag="Special">TBF Special & Rasmalai</button>
+      </div>
+
+      <!-- Cakes Grid with Side-by-Side Dual Pricing -->
+      <div class="cakes-grid" id="cakesShowcaseGrid">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Custom Cake Enquiry Callout -->
+      <div class="custom-cake-cta-card">
+        <h3 class="custom-cake-title">Dreaming of a Personalized Designer Cake?</h3>
+        <p style="color: #d1dfed; max-width: 650px; margin: 0 auto 2rem; font-size: 1.05rem;">
+          Whether it’s a tiered birthday cake, romantic anniversary centerpiece, or bespoke fondant art, share your vision and reference photos with our master bakers.
+        </p>
+        <button class="btn btn-primary" id="openCakeEnquiryBtn">
+          🎂 Order Your Custom Cake Now
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. ABOUT US SECTION
+       ========================================================================= -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images-collage">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=700&auto=format&fit=crop&q=80" alt="Café ambience at The Bakers Farm" class="collage-img collage-img-tall" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700&auto=format&fit=crop&q=80" alt="Fresh artisan baking" class="collage-img" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700&auto=format&fit=crop&q=80" alt="Artisan bread & cookies" class="collage-img" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&auto=format&fit=crop&q=80" alt="Gathering at The Bakers Farm" class="collage-img" loading="lazy">
+        </div>
+
+        <div class="about-text-content">
+          <span class="section-eyebrow">Our Story & Craft</span>
+          <h2 class="section-title">More Than a Bakery.<br>A Place to Gather.</h2>
+          <p style="font-size: 1.05rem; color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+            Located in the vibrant heart of <strong>Aliganj, Lucknow</strong>, The Bakers Farm was founded on a simple passion: to unite the warmth of an artisan European-style bakery with the appetizing flavors of a modern café and casual dining destination.
+          </p>
+          <p style="font-size: 1.02rem; color: var(--color-text-muted); margin-bottom: 2rem; line-height: 1.7;">
+            Every cake sponge is whipped from scratch, our pasta sauces are slow-simmered, and our street-style momos and noodles are wok-tossed hot when you order. No compromises, no shortcuts — just genuine hospitality.
+          </p>
+
+          <div class="values-list">
+            <div class="value-item">
+              <div class="value-icon-box">🌾</div>
+              <div>
+                <h4 class="value-title">Freshly Made</h4>
+                <p class="value-desc">Quality ingredients and freshly prepared food baked daily without artificial preservatives.</p>
+              </div>
+            </div>
+
+            <div class="value-item">
+              <div class="value-icon-box">👨‍🍳</div>
+              <div>
+                <h4 class="value-title">Made With Care</h4>
+                <p class="value-desc">Thoughtfully crafted celebration cakes, desserts, and hearty restaurant meals.</p>
+              </div>
+            </div>
+
+            <div class="value-item">
+              <div class="value-icon-box">🎉</div>
+              <div>
+                <h4 class="value-title">Made For Moments</h4>
+                <p class="value-desc">Food for everyday cravings, joyful family gatherings, and milestone celebrations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. GALLERY SECTION
+       ========================================================================= -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Visual Tour</span>
+        <h2 class="section-title">A Feast for the Senses</h2>
+        <p class="section-subtitle">Take a glimpse into our celebration cakes, signature dishes, and welcoming bakery ambience.</p>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+        <button class="cake-filter-btn gallery-filter-btn active" data-category="all">All Photos</button>
+        <button class="cake-filter-btn gallery-filter-btn" data-category="cakes">Cakes</button>
+        <button class="cake-filter-btn gallery-filter-btn" data-category="pastries">Pastries & Desserts</button>
+        <button class="cake-filter-btn gallery-filter-btn" data-category="savory">Momos & Pasta</button>
+        <button class="cake-filter-btn gallery-filter-btn" data-category="drinks">Drinks</button>
+        <button class="cake-filter-btn gallery-filter-btn" data-category="ambience">Ambience</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. CONTACT & LOCATION SECTION
+       ========================================================================= -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Visit & Connect</span>
+        <h2 class="section-title">We’d Love to Welcome You</h2>
+        <p class="section-subtitle">Come dine in, pick up your custom cake, or send us your questions.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Contact Details & Form -->
+        <div class="contact-card">
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📍</div>
+              <div>
+                <span class="contact-info-title">Location</span>
+                <div class="contact-info-val">Aliganj, Lucknow, Uttar Pradesh</div>
+                <span class="placeholder-pill">ℹ️ Exact street address to be confirmed by client</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">🕒</div>
+              <div>
+                <span class="contact-info-title">Opening Hours</span>
+                <div class="contact-info-val">Mon – Sun: 10:00 AM – 11:00 PM</div>
+                <span class="placeholder-pill">ℹ️ Operating hours subject to confirmation</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📞</div>
+              <div>
+                <span class="contact-info-title">Phone & WhatsApp Orders</span>
+                <div class="contact-info-val">+91 9XXXXXXXXX / WhatsApp Ordering</div>
+                <span class="placeholder-pill">ℹ️ Official business numbers to be confirmed</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📸</div>
+              <div>
+                <span class="contact-info-title">Instagram</span>
+                <div class="contact-info-val">
+                  <a href="https://www.instagram.com/thebakersfarm/" target="_blank" rel="noopener" style="color: var(--color-gold-deep); text-decoration: underline;">
+                    @thebakersfarm (instagram.com/thebakersfarm)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2rem;">
+            <a href="https://wa.me/919000000000?text=Hi%20The%20Bakers%20Farm,%20I%20would%20like%20to%20place%20an%20order!" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+              💬 Chat on WhatsApp
+            </a>
+            <a href="https://www.instagram.com/thebakersfarm/" target="_blank" rel="noopener" class="btn btn-dark btn-sm">
+              📸 Follow on Instagram
+            </a>
+          </div>
+
+          <!-- Contact / Feedback Form -->
+          <form id="contactForm" style="border-top: 1px solid rgba(43, 61, 71, 0.1); padding-top: 1.5rem;">
+            <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--color-brand-primary);">Send Us a Message</h4>
+            <div class="form-group">
+              <label class="form-label" for="contactName">Your Name</label>
+              <input type="text" id="contactName" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactPhone">Phone Number</label>
+              <input type="tel" id="contactPhone" class="form-control" placeholder="10-digit mobile number" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Message or Feedback</label>
+              <textarea id="contactMessage" class="form-control" rows="3" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message via WhatsApp 🚀
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Map Card -->
+        <div class="map-card">
+          <!-- Google Maps iframe centered around Aliganj, Lucknow -->
+          <iframe 
+            src="https://maps.google.com/maps?q=Aliganj%20Lucknow&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+            title="The Bakers Farm Aliganj Lucknow Location Map" 
+            loading="lazy" 
+            allowfullscreen>
+          </iframe>
+          <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(27, 40, 47, 0.9); padding: 0.8rem 1.2rem; border-radius: var(--radius-sm); border: 1px solid rgba(212, 175, 103, 0.3); color: #ffffff; font-size: 0.85rem;">
+            📍 <strong>The Bakers Farm:</strong> Aliganj, Lucknow (Pin will be updated with exact street once confirmed)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo-frame">
+            <img src="assets/logo.jpg" alt="The Bakers Farm Emblem" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <h3 style="color: var(--color-gold-light); font-size: 1.5rem; margin-bottom: 0.4rem;">THE BAKERS FARM</h3>
+          <p class="footer-desc">
+            Freshly baked. Deliciously crafted. Artisan bakery, café, and restaurant nestled in Aliganj, Lucknow.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/thebakersfarm/" target="_blank" rel="noopener" class="social-icon-link" title="Instagram">📸</a>
+            <a href="https://wa.me/919000000000" target="_blank" rel="noopener" class="social-icon-link" title="WhatsApp">💬</a>
+            <a href="#contact" class="social-icon-link" title="Contact">📍</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#menu" class="footer-link">Explore Menu</a></li>
+            <li><a href="#cakes" class="footer-link">Celebration Cakes</a></li>
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#gallery" class="footer-link">Photo Gallery</a></li>
+            <li><a href="#contact" class="footer-link">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Top Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#menu" onclick="switchMenuCategory('cakes')" class="footer-link">Artisan Cakes</a></li>
+            <li><a href="#menu" onclick="switchMenuCategory('pastries')" class="footer-link">Pastries & Biscoff</a></li>
+            <li><a href="#menu" onclick="switchMenuCategory('pasta')" class="footer-link">Creamy Pasta</a></li>
+            <li><a href="#menu" onclick="switchMenuCategory('momos')" class="footer-link">Kurkure Momos</a></li>
+            <li><a href="#menu" onclick="switchMenuCategory('burger')" class="footer-link">Burgers & Shakes</a></li>
+            <li><a href="#menu" onclick="switchMenuCategory('chaat')" class="footer-link">Lucknowi Chaat</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Visit Us</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.8rem; color: #a5b9c5;">
+            Aliganj, Lucknow, Uttar Pradesh<br>
+            <span style="font-size: 0.78rem; color: var(--color-gold-light);">(Full address update pending)</span>
+          </p>
+          <p style="font-size: 0.88rem; margin-bottom: 1rem; color: #a5b9c5;">
+            🕒 10:00 AM – 11:00 PM (Daily)
+          </p>
+          <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="window.tbfCart.open()">
+            Order Online Now 🛍️
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Bakers Farm (TBF). All Rights Reserved.
+        </div>
+        <div>
+          Domain: <a href="https://thebakersfarm.com" style="color: var(--color-gold-light);">thebakersfarm.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. SLIDE-OUT CART DRAWER & WHATSAPP CHECKOUT
+       ========================================================================= -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <div>
+        <h3>Your Order</h3>
+        <span style="font-size: 0.75rem; color: var(--color-gold-light); letter-spacing: 0.05em;">THE BAKERS FARM</span>
+      </div>
+      <button class="cart-close-btn" id="cartClose" aria-label="Close Shopping Cart">✕</button>
+    </div>
+
+    <div class="cart-body">
+      <div class="cart-empty-state" id="cartEmptyState">
+        <div class="cart-empty-icon">🍰</div>
+        <h4>Your cart is empty</h4>
+        <p style="font-size: 0.88rem; margin-top: 0.4rem;">Explore our menu and add your favorite cakes, momos, or meals!</p>
+        <button class="btn btn-secondary btn-sm" style="margin-top: 1.2rem;" onclick="window.tbfCart.close()">Browse Menu</button>
+      </div>
+
+      <div id="cartItemsList">
+        <!-- Rendered dynamically by cart.js -->
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <!-- Pickup vs Delivery Switch -->
+      <div class="cart-delivery-toggle">
+        <div class="toggle-option active" id="togglePickup">🏪 Café Pickup / Dine-in</div>
+        <div class="toggle-option" id="toggleDelivery">🚀 Home Delivery</div>
+      </div>
+
+      <!-- Quick Details Fields -->
+      <input type="text" id="customerName" class="cart-input-field" placeholder="Your Name">
+      <input type="tel" id="customerPhone" class="cart-input-field" placeholder="Contact Mobile No.">
+      <input type="text" id="customerAddress" class="cart-input-field" placeholder="Table No. or Pickup Note (optional)">
+      <input type="text" id="customerNotes" class="cart-input-field" placeholder="Special cooking / packaging note">
+
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span class="cart-total-amount" id="cartTotalAmount">₹0</span>
+      </div>
+
+      <button class="btn btn-whatsapp" id="cartWhatsappCheckout" style="width: 100%; padding: 0.95rem;">
+        <span>💬 Order via WhatsApp</span>
+      </button>
+      <div style="font-size: 0.75rem; text-align: center; color: var(--color-text-muted); margin-top: 0.5rem;">
+        Sends your formatted itemized order directly to The Bakers Farm on WhatsApp
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       12. CUSTOM CAKE ENQUIRY MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="cakeEnquiryModal" role="dialog" aria-label="Custom Cake Order">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3>Custom Cake Order Enquiry</h3>
+          <span style="font-size: 0.75rem; color: var(--color-gold-light);">Tailored for your special celebrations</span>
+        </div>
+        <button class="cart-close-btn" id="closeCakeEnquiryBtn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="customCakeForm">
+          <div class="form-group">
+            <label class="form-label" for="cakeCustName">Your Full Name *</label>
+            <input type="text" id="cakeCustName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cakeCustPhone">Phone / WhatsApp Number *</label>
+            <input type="tel" id="cakeCustPhone" class="form-control" placeholder="10-digit mobile number" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="cakeFlavour">Cake Flavour *</label>
+              <select id="cakeFlavour" class="form-control" required>
+                <option value="TBF Special Almond Cake">TBF Special Almond (Signature)</option>
+                <option value="Red Velvet Cake">Red Velvet</option>
+                <option value="Lotus Biscoff Cake">Lotus Biscoff</option>
+                <option value="Cheesecake">New York Cheesecake</option>
+                <option value="Black Forest Cake">Black Forest</option>
+                <option value="Fresh Fruit Cake">Fresh Fruit</option>
+                <option value="Chocolate Mud Cake">Chocolate Mud / Truffle</option>
+                <option value="Rasmalai Cake">Rasmalai Cake</option>
+                <option value="Pineapple Cake">Pineapple Cake</option>
+                <option value="Butterscotch Cake">Butterscotch</option>
+                <option value="Other Custom Flavour">Other (specify in notes)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cakeWeight">Weight / Size *</label>
+              <select id="cakeWeight" class="form-control" required>
+                <option value="½ kg">½ kg</option>
+                <option value="1 kg" selected>1 kg</option>
+                <option value="1.5 kg">1.5 kg</option>
+                <option value="2 kg">2 kg</option>
+                <option value="3 kg+ (Tiered)">3 kg+ (Multi-Tier)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cakeMessage">Message on Cake</label>
+            <input type="text" id="cakeMessage" class="form-control" placeholder="e.g. Happy 25th Birthday Priya!">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="cakeDate">Delivery / Pickup Date *</label>
+              <input type="date" id="cakeDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cakeFondantType">Fondant Finish</label>
+              <select id="cakeFondantType" class="form-control">
+                <option value="Standard Cream">Standard Cream (No extra)</option>
+                <option value="Semi Fondant (+₹400/kg)">Semi Fondant (+₹400/kg)</option>
+                <option value="Full Fondant (+₹600/kg)">Full Fondant (+₹600/kg)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cakeNotes">Special Requirements / Theme Description</label>
+            <textarea id="cakeNotes" class="form-control" rows="2" placeholder="Describe your design theme, color palette, or attach reference on WhatsApp..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
+            Send Custom Cake Enquiry 🎂
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       13. GALLERY LIGHTBOX MODAL
+       ========================================================================= -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">✕</button>
+      <img src="" alt="The Bakers Farm Showcase" class="lightbox-image" id="lightboxImage">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="data/menu-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
