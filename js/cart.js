@@ -208,7 +208,7 @@ class TBFCart {
 
     const whatsappNum = (window.TBF_CONFIG && window.TBF_CONFIG.whatsappPlaceholder) 
       ? window.TBF_CONFIG.whatsappPlaceholder 
-      : "919000000000";
+      : "917266914546";
 
     const dateStr = new Date().toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" });
 

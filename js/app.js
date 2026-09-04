@@ -450,7 +450,7 @@ function initCustomCakeModal() {
       const date = document.getElementById("cakeDate").value;
       const notes = document.getElementById("cakeNotes").value.trim();
 
-      const whatsappNum = (window.TBF_CONFIG && window.TBF_CONFIG.whatsappPlaceholder) || "919000000000";
+      const whatsappNum = (window.TBF_CONFIG && window.TBF_CONFIG.whatsappPlaceholder) || "917266914546";
 
       let waText = `🎂 *CUSTOM CAKE ENQUIRY — THE BAKERS FARM*\n`;
       waText += `👤 *Name:* ${name}\n`;
@@ -495,7 +495,7 @@ function initContactForm() {
     const phone = document.getElementById("contactPhone").value.trim();
     const msg = document.getElementById("contactMessage").value.trim();
 
-    const whatsappNum = (window.TBF_CONFIG && window.TBF_CONFIG.whatsappPlaceholder) || "919000000000";
+    const whatsappNum = (window.TBF_CONFIG && window.TBF_CONFIG.whatsappPlaceholder) || "917266914546";
 
     const text = `👋 *MESSAGE FROM WEBSITE — THE BAKERS FARM*\n` +
       `👤 *Name:* ${name}\n` +
