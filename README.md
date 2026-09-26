@@ -1,7 +1,7 @@
-# The Bakers Farm (TBF) — Artisan Bakery & Café Website
+# The Bakers Farm (TBF) — Artisan Bakery & Restaurant Website
 
 > **Crafting Moments, Baking Happiness**  
-> Premium Artisan Bakery, Café & Restaurant in Aliganj, Lucknow.
+> Premium Artisan Bakery & Restaurant in Ravindra Garden, Aliganj, Lucknow.
 
 ---
 

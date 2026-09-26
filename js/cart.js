@@ -76,7 +76,7 @@ class TBFCart {
         this.orderType = "delivery";
         this.deliveryBtn.classList.add("active");
         this.pickupBtn.classList.remove("active");
-        if (this.addressInput) this.addressInput.placeholder = "Delivery Address (Aliganj & nearby)";
+        if (this.addressInput) this.addressInput.placeholder = "Delivery Address (Ravindra Garden, Aliganj & nearby)";
       });
     }
 
@@ -206,15 +206,15 @@ class TBFCart {
     const address = this.addressInput ? this.addressInput.value.trim() : "";
     const notes = this.notesInput ? this.notesInput.value.trim() : "";
 
-    const whatsappNum = (window.TBF_CONFIG && window.TBF_CONFIG.whatsappPlaceholder) 
-      ? window.TBF_CONFIG.whatsappPlaceholder 
-      : "917266914546";
+    const whatsappNum = (window.TBF_CONFIG && (window.TBF_CONFIG.whatsappNumber || window.TBF_CONFIG.whatsappPlaceholder)) 
+      ? (window.TBF_CONFIG.whatsappNumber || window.TBF_CONFIG.whatsappPlaceholder) 
+      : "917897620685";
 
     const dateStr = new Date().toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" });
 
     let message = `🍰 *NEW ORDER — THE BAKERS FARM (TBF)*\n`;
     message += `📍 *Time:* ${dateStr}\n`;
-    message += `🛍️ *Order Type:* ${this.orderType === "delivery" ? "🚀 Home Delivery" : "🏪 Café Takeaway / Dine-in"}\n`;
+    message += `🛍️ *Order Type:* ${this.orderType === "delivery" ? "🚀 Home Delivery" : "🏪 Takeaway / Dine-in"}\n`;
     
     if (name) message += `👤 *Customer Name:* ${name}\n`;
     if (phone) message += `📞 *Phone:* ${phone}\n`;
@@ -229,7 +229,9 @@ class TBFCart {
 
     message += `\n💰 *TOTAL BILL:* ₹${this.getTotal().toLocaleString("en-IN")}\n`;
     message += `--------------------------------\n`;
-    message += `_Ordered via thebakersfarm.com website_`;
+    message += `_The Bakers Farm — Bakery & Restaurant_\n`;
+    message += `📍 _20, Ravindra Garden, Aliganj, Lucknow_\n`;
+    message += `📞 _Phone / WA: 7897620685 | www.thebakersfarm.com_`;
 
     const encoded = encodeURI(message);
     const waUrl = `https://wa.me/${whatsappNum}?text=${encoded}`;
